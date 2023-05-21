@@ -102,6 +102,8 @@ const checkForWinner = () => {
       if (board[row][col] !== '') {
   
         if (board[row][col] === board[row][col +1] && board[row][col +1] === board[row][col +2] && board[row][col +2] === board[row][col +3]) {
+          
+          const msg = `${currPlayer.toUpperCase()} Player WINS!!!`;
 
           setTimeout(endGame, 150, msg);
 
@@ -121,6 +123,8 @@ const checkForWinner = () => {
 
         if (board[row][col] === board[row +1][col] && board[row +1][col] === board[row +2][col] && board[row +2][col] === board[row +3][col]) {
 
+          const msg = `${currPlayer.toUpperCase()} Player WINS!!!`;
+
           setTimeout(endGame, 150, msg);
 
           return;
@@ -138,7 +142,9 @@ const checkForWinner = () => {
       if (board[row][col] !== '') {
 
         if (board[row][col] === board[row +1][col +1] && board[row+1][col+1] === board[row+2][col+2] && board[row+2][col+2] === board[row+3][col+3]) {
-
+          
+          const msg = `${currPlayer.toUpperCase()} Player WINS!!!`;
+          
           setTimeout(endGame, 150, msg);
 
           return;
@@ -157,6 +163,8 @@ const checkForWinner = () => {
 
         if (board[row][col] === board[row-1][col+1] && board[row-1][col+1] === board[row-2][col+2] && board[row-2][col+2] === board[row-3][col+3]) {
 
+          const msg = `${currPlayer.toUpperCase()} Player WINS!!!`;
+          
           setTimeout(endGame, 150, msg);
           
           return;
@@ -167,7 +175,6 @@ const checkForWinner = () => {
   }
 };
 
-const msg = `${currPlayer.toUpperCase()} Player WINS!!!`;
 
 const endGame = (msg) => alert(msg);
 
